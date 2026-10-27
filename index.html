@@ -1,0 +1,646 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 32 32%22%3E%3Crect width=%2232%22 height=%2232%22 rx=%226%22 fill=%22%230b2a3f%22/%3E%3Cpath d=%22M4 20c4-4 8 4 12 0s8 4 12 0%22 stroke=%22%237fb6d4%22 stroke-width=%223%22 fill=%22none%22/%3E%3C/svg%3E">
+<style>:root{color-scheme:light;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>Marcela C. Nascimento</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="Marcela C. Nascimento – marine ecologist and ecosystem modeller (Ecopath with Ecosim and Ecospace) at GEOMAR Helmholtz Centre for Ocean Research Kiel.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;1,6..72,400&family=Public+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: a bathymetric page — deep-water hero band with the portrait, then light "shelf" sections,
+   each research region introduced by its real coordinates and model specs in mono. */
+:root{
+  --bg:#e4f0f5;          /* shallow water */
+  --bg-deep:#c9e0eb;     /* deeper water, bottom of page */
+  --surface:#f8fcfd;
+  --ink:#10283a;         /* deep water */
+  --muted:#4f6575;
+  --sea:#1d6b98;         /* bathymetry blue from her maps */
+  --shelf:#d3e7f0;       /* shallow shelf */
+  --land:#8f9397;        /* map land grey */
+  --amber:#b3721f;       /* seed-necklace amber, the one warm accent */
+  --line:#bfd6e2;
+  --hero-bg:#0b2a3f; --hero-top:#1f6f98; --hero-mid:#0f4566; --hero-fg:#eef4f7; --hero-muted:#a9bfcc;
+  --f-display:"Newsreader", Georgia, "Times New Roman", serif;
+  --f-body:"Public Sans", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --f-mono:"IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+  --maxw:1120px;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0a1a26;--bg-deep:#050f17;--surface:#10273a;--ink:#e3edf3;--muted:#9fb3c1;--sea:#6fb2da;--shelf:#16303f;--land:#7d8790;
+  --amber:#e0a54b;--line:#22394a;--hero-bg:#05131d;--hero-top:#16577a;--hero-mid:#0a2b40;--hero-fg:#eef4f7;--hero-muted:#a9bfcc;color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0a1a26;--bg-deep:#050f17;--surface:#10273a;--ink:#e3edf3;--muted:#9fb3c1;--sea:#6fb2da;--shelf:#16303f;--land:#7d8790;
+  --amber:#e0a54b;--line:#22394a;--hero-bg:#05131d;--hero-top:#16577a;--hero-mid:#0a2b40;--hero-fg:#eef4f7;--hero-muted:#a9bfcc;color-scheme:dark}
+
+*{box-sizing:border-box}
+html{scroll-padding-top:72px}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
+body{background:linear-gradient(180deg,var(--bg) 0%,var(--bg-deep) 100%) fixed;background-color:var(--bg);color:var(--ink);font-family:var(--f-body);font-size:1rem;line-height:1.6;margin:0}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--hero-bg)}
+a{color:var(--sea);text-underline-offset:3px}
+a:focus-visible,button:focus-visible,summary:focus-visible{outline:2px solid var(--amber);outline-offset:3px;border-radius:2px}
+h1,h2,h3{font-family:var(--f-display);font-weight:600;line-height:1.15;text-wrap:balance;margin:0}
+.wrap{max-width:var(--maxw);margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.mono{font-family:var(--f-mono);font-size:.78rem;letter-spacing:.04em}
+.eyebrow{font-family:var(--f-mono);font-size:.75rem;letter-spacing:.14em;text-transform:uppercase;color:var(--amber)}
+
+/* nav */
+.nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:9;background:var(--hero-bg);color:var(--hero-fg);border-bottom:1px solid rgba(255,255,255,.08)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:12px}
+.nav .brand{font-family:var(--f-display);font-size:1.1rem;color:var(--hero-fg);text-decoration:none;white-space:nowrap}
+.nav ul{display:flex;gap:20px;list-style:none;margin:0;padding:0;overflow-x:auto;scrollbar-width:none}
+.nav ul::-webkit-scrollbar{display:none}
+.nav a.l{color:var(--hero-muted);text-decoration:none;font-size:.88rem;white-space:nowrap}
+.nav a.l:hover{color:var(--hero-fg)}
+.nav a.l[aria-current="page"]{color:var(--hero-fg);box-shadow:inset 0 -2px 0 var(--amber);padding-bottom:4px}
+.tabbed section{border-bottom:0;min-height:60vh}
+.next{display:flex;justify-content:flex-end;margin-top:48px}
+.next a{font-family:var(--f-mono);font-size:.82rem;text-decoration:none;border:1px solid var(--line);padding:8px 14px}
+@media (max-width:760px){.nav .brand{display:none}.nav .wrap{justify-content:flex-start}}
+
+/* hero */
+.hero{background:linear-gradient(180deg,var(--hero-top) 0%,var(--hero-mid) 45%,var(--hero-bg) 100%);color:var(--hero-fg);position:relative;overflow:hidden}
+.hero .photo{position:absolute;inset:0;background:url(img/hero-fjord.jpg) center 55%/cover no-repeat}
+.hero .photo::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(6,22,34,.88) 0%,rgba(8,32,50,.66) 45%,rgba(8,32,50,.18) 100%),linear-gradient(180deg,rgba(6,22,34,0) 55%,rgba(6,22,34,.5) 100%)}
+.hero canvas{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;opacity:.35}
+.hero .credit a{color:inherit}
+.hero .credit{position:absolute;right:max(16px,env(safe-area-inset-right,0px));bottom:62px;z-index:2;font-family:var(--f-mono);font-size:.68rem;color:rgba(238,244,247,.75)}
+@media (max-width:760px){.hero .photo::after{background:linear-gradient(180deg,rgba(6,22,34,.55) 0%,rgba(6,22,34,.85) 60%,rgba(6,22,34,.92) 100%)}.hero .credit{display:none}}
+.hero .wrap{position:relative;z-index:1}
+.wave{display:block;width:100%;height:56px;margin-top:-1px;color:var(--bg)}
+
+.hero .wrap{display:grid;grid-template-columns:minmax(0,1fr);gap:48px;align-items:end;padding-block:56px 0;margin-bottom:-28px}
+.hero h1{font-size:clamp(2.4rem,5.5vw,4.2rem);font-weight:400;letter-spacing:-.01em}
+.hero h1 em{font-style:italic;color:var(--hero-muted)}
+.hero .lede{font-size:1.15rem;color:var(--hero-muted);max-width:34ch;margin:20px 0 28px}
+.hero .coords{color:var(--hero-muted);margin-bottom:18px}
+.hero .txt{padding-bottom:56px;min-width:0}
+.hero figure{margin:0;align-self:end}
+.pcredit{font-family:var(--f-mono);font-size:.68rem;color:var(--muted);text-align:right;margin-top:6px;max-width:440px;margin-left:auto}
+.pcredit a{color:inherit}
+.hero .pcredit{color:rgba(238,244,247,.75);max-width:360px;position:relative;z-index:2;margin-top:-26px;padding-bottom:34px}
+.hero figure img{display:block;width:100%;max-width:360px;height:auto;margin-left:auto;aspect-ratio:4/5;object-fit:cover;object-position:50% 18%}
+.ids{display:flex;flex-wrap:wrap;gap:10px}
+.ids a{font-family:var(--f-mono);font-size:.78rem;color:var(--hero-fg);text-decoration:none;border:1px solid rgba(255,255,255,.28);padding:7px 12px;border-radius:2px}
+.ids a:hover{border-color:var(--amber);color:#fff}
+@media (max-width:760px){.hero .wrap{grid-template-columns:1fr;gap:24px;padding-block:36px 0}.hero .txt{padding-bottom:0}.hero figure img{max-width:300px;margin:0 auto}}
+
+/* sections */
+section{padding-block:72px;border-bottom:1px solid var(--line)}
+.sec-head{display:grid;grid-template-columns:200px minmax(0,1fr);gap:32px;margin-bottom:36px}
+.sec-head h2{font-size:clamp(1.8rem,3.4vw,2.5rem)}
+.sec-head p{color:var(--muted);max-width:62ch;margin:10px 0 0}
+@media (max-width:760px){.sec-head{grid-template-columns:1fr;gap:6px}section{padding-block:52px}}
+
+/* about */
+.about{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:48px;align-items:start}
+.about p{max-width:65ch;margin:0 0 1em}
+.about .pfig{margin:0}
+.about img{width:100%;max-width:440px;height:auto;aspect-ratio:4/5;object-fit:cover;object-position:50% 25%;display:block;margin-left:auto}
+.facts{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1px;background:var(--line);border:1px solid var(--line);margin-top:28px}
+.facts div{background:var(--surface);padding:16px}
+.facts b{display:block;font-family:var(--f-display);font-size:1.9rem;font-weight:400;color:var(--sea);font-variant-numeric:tabular-nums}
+.facts span{font-size:.82rem;color:var(--muted)}
+@media (max-width:760px){.about{grid-template-columns:1fr}.about img{margin:0 auto;max-width:280px}.facts{grid-template-columns:repeat(2,minmax(0,1fr))}}
+
+/* research regions */
+.region{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:40px;padding-block:40px;border-top:1px solid var(--line)}
+.region:first-of-type{border-top:0;padding-top:0}
+.region h3{font-size:1.8rem;margin:6px 0 12px}
+.region p{margin:0 0 1em;max-width:60ch}
+.specs{display:grid;grid-template-columns:auto 1fr;gap:4px 16px;margin:18px 0;padding:14px 16px;background:var(--shelf);font-family:var(--f-mono);font-size:.8rem}
+.specs dt{color:var(--muted)}
+.specs dd{margin:0}
+.figs{display:grid;gap:14px;min-width:0;align-content:start}
+.figs figure{margin:0;background:none;border:0;padding:0}
+.figs img{display:block;width:100%;height:auto;border:3px solid #fff;box-sizing:border-box}
+.figs img.map{border:0}
+.figs img.line{border:0}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .figs img.line{filter:invert(1) hue-rotate(180deg)}}
+:root[data-theme="dark"] .figs img.line{filter:invert(1) hue-rotate(180deg)}
+.pair-figs{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.pair-figs figure{margin:0}
+.pair-figs img{aspect-ratio:4/3;object-fit:cover}
+.figs img.web{border:0;-webkit-mask-image:linear-gradient(90deg,transparent 0,#000 6%,#000 94%,transparent 100%),linear-gradient(180deg,transparent 0,#000 7%,#000 93%,transparent 100%);-webkit-mask-composite:source-in;mask-image:linear-gradient(90deg,transparent 0,#000 6%,#000 94%,transparent 100%),linear-gradient(180deg,transparent 0,#000 7%,#000 93%,transparent 100%);mask-composite:intersect}
+.hero figure img{-webkit-mask-image:linear-gradient(90deg,transparent 0,#000 32%,#000 82%,transparent 100%),linear-gradient(180deg,transparent 0,#000 20%,#000 80%,transparent 100%);-webkit-mask-composite:source-in;mask-image:linear-gradient(90deg,transparent 0,#000 32%,#000 82%,transparent 100%),linear-gradient(180deg,transparent 0,#000 20%,#000 80%,transparent 100%);mask-composite:intersect}
+.figs figcaption{font-size:.8rem;color:var(--muted);margin-top:8px}
+.figs.two{grid-template-columns:1fr 1fr}
+@media (max-width:860px){.region{grid-template-columns:1fr}.figs.two{grid-template-columns:1fr}}
+.projects{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;margin-top:40px}
+.projects article{border-top:2px solid var(--sea);padding-top:14px}
+.msp{margin-top:20px;padding:16px 18px;border-left:3px solid var(--sea);background:var(--surface)}
+.msp h4{font-family:var(--f-display);font-size:1.15rem;margin:0 0 8px}
+.msp p{margin:0 0 .6em;font-size:.93rem}
+.plogo{display:block;height:64px;width:auto;max-width:100%;object-fit:contain;object-position:left center;margin-bottom:10px}
+.projects article{display:flex;flex-direction:column}
+.projects h4 a{color:inherit;text-decoration-color:var(--line)}
+.projects h4{font-family:var(--f-display);font-size:1.25rem;font-weight:600;margin:4px 0 6px}
+.projects p{margin:0;color:var(--muted);font-size:.93rem}
+@media (max-width:900px){.projects{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:560px){.projects{grid-template-columns:1fr}}
+
+/* photo blocks */
+.seas{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;margin-top:48px}
+.seas h3{font-size:1.15rem;margin:0 0 4px}
+.seas .mono{color:var(--muted)}
+.seas .pair{display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-top:10px}
+.seas img{display:block;width:100%;height:auto;aspect-ratio:1/1;object-fit:cover}
+@media (max-width:760px){.seas{grid-template-columns:1fr}}
+.years{display:grid;grid-template-columns:repeat(auto-fill,minmax(170px,1fr));gap:16px;margin:0 0 36px;align-items:start}
+.years figure{margin:0;position:relative;min-width:0}
+.years img{display:block;width:100%;height:auto;background:var(--shelf)}
+.years figcaption{font-size:.75rem;color:var(--muted);margin-top:6px;line-height:1.35}
+.yr-tag{position:absolute;top:6px;left:6px;background:var(--sea);color:#fff;font-family:var(--f-mono);font-size:.75rem;padding:2px 7px;border-radius:2px}
+.shots{display:grid;gap:18px;min-width:0}
+.shots figure{margin:0}
+.shots img{display:block;width:100%;height:auto}
+.shots figcaption{font-size:.8rem;color:var(--muted);margin-top:6px}
+.inline-photo{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:14px;margin-top:18px}
+.inline-photo img{display:block;width:100%;height:auto;aspect-ratio:4/3;object-fit:cover}
+.inline-photo figure{margin:0}
+.inline-photo figcaption{font-size:.8rem;color:var(--muted);margin-top:6px}
+@media (max-width:520px){.inline-photo{grid-template-columns:1fr}}
+.band{height:clamp(160px,26vw,300px);background:url(img/gulls.jpg) center 60%/cover no-repeat;position:relative}
+.band span{position:absolute;left:max(16px,env(safe-area-inset-left,0px));bottom:12px;font-family:var(--f-mono);font-size:.7rem;color:#eef4f7;text-shadow:0 1px 2px rgba(0,0,0,.6)}
+.teach-wrap{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,260px);gap:40px;align-items:start}
+.teach-wrap figure{margin:0}
+.courses{list-style:none;margin:8px 0 0;padding:0;font-size:.9rem}
+.courses li{display:grid;grid-template-columns:5.5em 1fr;gap:8px;padding:3px 0;border:0}
+.courses .cy{font-family:var(--f-mono);font-size:.75rem;color:var(--muted);padding-top:2px}
+.teach-wrap img{display:block;width:100%;height:auto}
+.teach-wrap figcaption{font-size:.8rem;color:var(--muted);margin-top:6px}
+@media (max-width:760px){.teach-wrap{grid-template-columns:1fr}.teach-wrap figure{max-width:280px}}
+.note-wrap{display:grid;grid-template-columns:120px minmax(0,1fr);gap:20px;align-items:center;margin-top:28px;max-width:820px}
+.note-wrap img{width:100%;height:auto;display:block}
+.note-wrap .note{margin-top:0}
+@media (max-width:520px){.note-wrap{grid-template-columns:90px minmax(0,1fr)}}
+
+/* lists */
+.list{list-style:none;margin:0;padding:0;display:grid;gap:14px}
+.list li{display:grid;grid-template-columns:84px minmax(0,1fr);gap:16px;align-items:baseline}
+.yr{font-family:var(--f-mono);font-size:.8rem;color:var(--amber);font-variant-numeric:tabular-nums}
+.ref{font-size:.95rem;min-width:0;overflow-wrap:anywhere}
+.ref .ti{font-weight:500}
+.ref .en{color:var(--muted)}
+.ref a{font-family:var(--f-mono);font-size:.75rem}
+.tag{display:inline-block;font-family:var(--f-mono);font-size:.68rem;letter-spacing:.06em;text-transform:uppercase;color:var(--sea);border:1px solid var(--line);padding:1px 6px;margin-right:8px;vertical-align:1px}
+.meta{display:block;color:var(--muted);font-size:.88rem}
+h3.sub{font-size:1.3rem;margin:40px 0 16px}
+details{margin-top:20px}
+details.glance{margin:14px 0 0}
+details.glance .specs{margin:10px 0 0}
+summary{cursor:pointer;font-family:var(--f-mono);font-size:.82rem;color:var(--sea)}
+details .list{margin-top:16px}
+@media (max-width:520px){.list li{grid-template-columns:1fr;gap:2px}}
+
+.talks{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,230px);gap:40px;align-items:start}
+.talks .shots{gap:14px}
+.talks figure img{width:100%;display:block}
+.talks figcaption{font-size:.8rem;color:var(--muted);margin-top:8px}
+@media (max-width:860px){.talks{grid-template-columns:1fr}.talks figure{position:static;max-width:360px}}
+
+.note{background:var(--shelf);padding:16px 18px;font-size:.92rem;max-width:70ch;margin-top:28px}
+
+/* contact */
+.contact{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:40px}
+.contact .addr{font-size:1rem}
+.copy{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin:8px 0 18px}
+.copy code{font-family:var(--f-mono);font-size:1rem;background:var(--shelf);padding:6px 10px;user-select:all}
+.copy button{font-family:var(--f-mono);font-size:.75rem;background:none;border:1px solid var(--line);color:var(--ink);padding:6px 10px;cursor:pointer}
+.links{list-style:none;padding:0;margin:0;display:grid;gap:8px}
+@media (max-width:760px){.contact{grid-template-columns:1fr}}
+.logos{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px}
+.logos figure{margin:0;display:flex;flex-direction:column;gap:10px}
+.logos img{height:72px;width:auto;max-width:100%;object-fit:contain;object-position:left center;background:#fff;padding:8px;border:1px solid var(--line)}
+.logos figcaption{font-size:.82rem;color:var(--muted)}
+@media (max-width:760px){.logos{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.gal-region{margin-top:36px}
+.gal-region h3{font-size:1.3rem;margin:0 0 4px}
+.gal-region>.mono{color:var(--muted)}
+.gal{columns:3 260px;column-gap:14px;margin-top:14px}
+.gal figure{margin:0 0 14px;break-inside:avoid}
+.gal img{display:block;width:100%;height:auto}
+.gal figcaption{font-size:.78rem;color:var(--muted);margin-top:5px;font-family:var(--f-mono)}
+footer{padding-block:28px;color:var(--muted);font-size:.82rem}
+</style>
+
+</head>
+<body>
+<nav class="nav" aria-label="Main">
+  <div class="wrap">
+    <a class="brand" href="#about" data-tab="about">Marcela C. Nascimento</a>
+    <ul>
+      <li><a class="l" href="#about" data-tab="about">Home</a></li>
+      <li><a class="l" href="#research" data-tab="research">Research</a></li>
+      <li><a class="l" href="#publications" data-tab="publications">Publications</a></li>
+      <li><a class="l" href="#talks" data-tab="talks">Talks &amp; posters</a></li>
+      <li><a class="l" href="#teaching" data-tab="teaching">Teaching</a></li>
+      <li><a class="l" href="#outreach" data-tab="outreach">Outreach</a></li>
+      <li><a class="l" href="#gallery" data-tab="gallery">Gallery</a></li>
+      <li><a class="l" href="#service" data-tab="service">Service</a></li>
+      <li><a class="l" href="#contact" data-tab="contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="hero" id="top" data-pane="about">
+  <div class="photo" aria-hidden="true"></div>
+  <canvas id="sea" aria-hidden="true"></canvas>
+  <span class="credit">Fjord near Tromsø, Norway</span>
+  <div class="wrap">
+    <div class="txt">
+      <p class="coords mono">54.33°N 10.18°E · GEOMAR, Kiel</p>
+      <h1>Marcela C. Nascimento<br><em>marine ecologist</em></h1>
+      <p class="lede">I build food-web models of marine ecosystems, from the Brazilian shelf to the Barents and Western Baltic seas, to see how climate change and fishing reshape them.</p>
+      <div class="ids">
+        <a href="https://orcid.org/0000-0002-6213-1271" target="_blank" rel="noopener">ORCID</a>
+        <a href="https://scholar.google.com/citations?user=rxmQMeQAAAAJ" target="_blank" rel="noopener">Google Scholar</a>
+        <a href="https://www.researchgate.net/profile/Marcela-Nascimento-2" target="_blank" rel="noopener">ResearchGate</a>
+        <a href="http://lattes.cnpq.br/2776741366969678" target="_blank" rel="noopener">Lattes</a>
+        <a href="https://www.linkedin.com/in/marcela-nascimento-59012725/" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </div>
+  </div>
+  <svg class="wave" viewBox="0 0 1440 56" preserveAspectRatio="none" aria-hidden="true"><path fill="currentColor" d="M0 28 C 180 0 360 56 540 30 S 900 4 1080 26 S 1320 50 1440 22 L1440 56 L0 56 Z"/></svg>
+</header>
+
+<main>
+<section id="about" data-pane="about">
+  <div class="wrap">
+    <div class="sec-head"><span class="eyebrow">About</span><h2>From the tropics to the Arctic</h2></div>
+    <div class="about">
+      <div>
+        <p>One question runs through my work: what happens to a sea when it warms up and we keep fishing it? To explore it, I build food-web models, digital versions of an ecosystem in which every group, from microorganisms to top predators and fishing fleets, eats and is eaten. Then I run them into the future. My main tool is Ecopath with Ecosim and Ecospace (EwE).</p>
+        <p>My academic path has followed the sea. It began in Brazil, where I modelled the deep shelf and slope off the southeastern Brazilian coast. Then I moved to the Arctic, where I modelled the Barents Sea during The Nansen Legacy project at UiT The Arctic University of Norway. Since 2023, I have lived in Germany, where I am part of the <a href="https://www.geomar.de/researchgroup-mscotti" target="_blank" rel="noopener">Ecosystem Modelling group</a> at GEOMAR in Kiel. There I study the Western Baltic Sea: how multiple stressors shape the ecosystem, and how fisheries management can help it cope with climate change.</p>
+        <p>Research is not my only background. For many years I did environmental fieldwork and assessments in Brazil, in the Atlantic Forest, the Amazon and the Cerrado. I also taught ecology and environmental policy at university and helped build the Brazilian Air Force's environmental management system. That practical side still shapes how I work: I want my models to be useful to the people who make decisions about the sea.</p>
+      </div>
+      <figure class="pfig"><img src="img/portrait-bw.jpg" alt="Black-and-white portrait of Marcela C. Nascimento" width="1000" height="1500"><figcaption class="pcredit">Photo: <a href="https://www.joykroeger.de" target="_blank" rel="noopener">Joy Kröger / Fotografie</a></figcaption></figure>
+    </div>
+    <div class="facts">
+      <div><b>3</b><span>regional food-web models</span></div>
+      <div><b>9</b><span>peer-reviewed articles</span></div>
+      <div><b>32</b><span>conference talks and posters</span></div>
+      <div><b>42</b><span>regulations, reports and environmental studies</span></div>
+    </div>
+    <div class="seas">
+      <div><h3>Brazil</h3><span class="mono">23°S coast · Amazon, 2019</span>
+        <div class="pair"><img src="img/sea-brazil-coast.jpg" alt="Waves on a rocky beach with forested mountains on the Brazilian coast" width="900" height="506"><img src="img/me-amazon-boat.jpg" alt="Marcela seen from behind with arms open in a boat on a dark Amazon river, 2019" width="1000" height="667"></div></div>
+      <div><h3>The Barents Sea</h3><span class="mono">70°N · Tromsø, Norway</span>
+        <div class="pair"><img src="img/sea-tromso-aurora.jpg" alt="Green aurora over the lights of Tromsø" width="1200" height="900"><img src="img/sea-tromso-peaks.jpg" alt="Snowy mountain peaks above a fjord in northern Norway" width="1000" height="750"></div></div>
+      <div><h3>The Western Baltic</h3><span class="mono">54°N · Kiel, Germany</span>
+        <div class="pair"><img src="img/sea-kiel-beach.jpg" alt="Baltic beach with wicker beach chairs near Kiel" width="900" height="675"><img src="img/sea-kiel-sunset.jpg" alt="Sunset over the Kiel Fjord" width="700" height="934"></div></div>
+    </div>
+    <div class="next"><a href="#research" data-tab="research">Next: Research →</a></div>
+  </div>
+</section>
+
+<section id="research" data-pane="research">
+  <div class="wrap">
+    <div class="sec-head"><span class="eyebrow">Research</span><div><h2>Ecosystem models</h2><p>Each model is a map of who eats whom, from algae to top predators and fishing boats. Ecospace turns it into a real map: animals move across a grid following temperature, food, predators and fishing, so we can see where they may live in the future.</p></div></div>
+
+    <div class="region">
+      <div>
+        <span class="eyebrow">2023 – present · GEOMAR · SpaCeParti · EcoScope</span>
+        <h3>Western Baltic Sea</h3>
+        <p>The Western Baltic Sea Ecospace model is adapted from the Ecopath model of Scotti et al. (2022). This spatial version asks how warming, different levels of primary production, oxygen and salinity, and different fishing rules, including marine protected areas, could change where fish live and what fishers catch until 2100. The same model also runs inside the Western Baltic edition of the MSP Challenge game.</p>
+        <dl class="specs">
+          <dt>Projects</dt><dd><a href="https://www.sustainmare.de/104231/index.php.en" target="_blank" rel="noopener">SpaCeParti</a> (DAM SustainMare) · <a href="https://ecoscopium.eu/" target="_blank" rel="noopener">EcoScope</a> (Horizon 2020)</dd>
+          <dt>Game</dt><dd><a href="https://www.mspchallenge.info/msp-challenge-simulation-platform.html" target="_blank" rel="noopener">MSP Challenge</a>, Western Baltic Sea edition</dd>
+          <dt>Papers</dt><dd><a href="https://doi.org/10.3389/fmars.2025.1561347" target="_blank" rel="noopener">Frontiers in Marine Science, 2025</a> · <a href="https://doi.org/10.1038/s44183-026-00188-z" target="_blank" rel="noopener">npj Ocean Sustainability, 2026</a></dd>
+        </dl>
+        <details class="glance"><summary>The model at a glance</summary><dl class="specs">
+          <dt>Area</dt><dd>ICES subdivisions 22–24 · 44,310 km²</dd>
+          <dt>Grid</dt><dd>~6 × 6 km · 1,244 active cells</dd>
+          <dt>Food web</dt><dd>18 functional groups · multi-stanza herring</dd>
+          <dt>Forcing</dt><dd>RCO-SCOBI · RCP4.5 / RCP8.5</dd>
+          <dt>Period</dt><dd>1994 – 2100, monthly</dd>
+        </dl></details>
+        <div class="msp"><h4>MSP Challenge · Western Baltic Sea</h4><p>MSP Challenge is a game for planning the sea. Planners and stakeholders decide where wind farms, shipping lanes, cables and protected areas go, and watch how the ecosystem responds. I developed the ecosystem model behind the Western Baltic edition.</p><p>Along the way I split the old, general "noise" pressure into impulsive noise, continuous noise and bottom vibration, added disturbance from the air, and created a way to score how strongly each pressure affects each species group. I joined a session with European stakeholders in Brussels as a specialist, and led one for the SpaCeParti team.</p><figure style="margin:10px 0"><img src="img/wbs-msp-map.jpg" alt="MSP Challenge map of the Western Baltic with wind farms, cables, shipping and protected areas" width="1400" height="763" style="width:100%;height:auto;display:block"><figcaption style="font-size:.8rem;color:var(--muted);margin-top:6px">Human activities in the Western Baltic Sea edition of the MSP Challenge.</figcaption></figure>
+<p class="mono"><a href="https://www.mspchallenge.info/msp-challenge-simulation-platform.html" target="_blank" rel="noopener">mspchallenge.info</a> · <a href="https://doi.org/10.3389/fmars.2025.1561347" target="_blank" rel="noopener">Nascimento et al. 2025</a></p></div>
+
+      </div>
+      <div class="figs">
+        <figure><img src="img/wbs-map-full.jpg" alt="Map of the Western Baltic Sea Ecospace model area, ICES subdivisions 22 to 24, with water depth and a globe showing its location in Europe" width="1600" height="1200"><figcaption>Model area in ICES subdivisions 22–24, with water depth.</figcaption></figure>
+        <figure><img class="line" src="img/wbs-foodweb-line.png" alt="Diagram of the Western Baltic food web with fish, seabirds, porpoises, seals, benthos and fishing fleets" width="1600" height="877"><figcaption>The Western Baltic food web and its fisheries.</figcaption></figure>
+        <div class="pair-figs"><figure><img src="img/gallery/g-wendtorf-waves.jpg" alt="Waves on a Baltic beach under a blue sky" width="900" height="1200"><figcaption>Baltic waves at Wendtorf, near Kiel.</figcaption></figure><figure><img src="img/gallery/g-eckernforde.jpg" alt="Stony Baltic shore with clear shallow water" width="1200" height="900"><figcaption>Stony shore in Eckernförde Bay.</figcaption></figure></div>
+      </div>
+    </div>
+
+    <div class="region">
+      <div>
+        <span class="eyebrow">2020 – 2023 · UiT · <a href="https://arvenetternansen.com" target="_blank" rel="noopener">The Nansen Legacy</a></span>
+        <h3>Barents Sea</h3>
+        <p>The Barents Sea is where Atlantic and Arctic waters meet, and with them boreal and Arctic communities, divided mostly by the Polar Front. I built the spatial Ecospace model on the Ecopath with Ecosim model of <a href="https://doi.org/10.3389/fmars.2021.732637" target="_blank" rel="noopener">Pedersen et al. (2021)</a>. Checked against survey data, the Ecospace model reproduces what scientists have seen in warm years: species moving poleward (<a href="https://doi.org/10.1016/j.ecolmodel.2023.110358" target="_blank" rel="noopener">Nascimento et al. 2023</a>). It then looks ahead, combining low- and high-emission climate scenarios with different fishing strategies (<a href="https://doi.org/10.3354/meps14868" target="_blank" rel="noopener">Nascimento et al. 2025</a>).</p>
+        <details class="glance"><summary>The model at a glance</summary><dl class="specs">
+          <dt>Area</dt><dd>Barents Sea LME · ~2.01 million km²</dd>
+          <dt>Grid</dt><dd>~65 × 65 km · 486 active cells</dd>
+          <dt>Food web</dt><dd>108 functional groups</dd>
+          <dt>Drivers</dt><dd>temperature, sea ice, depth, primary production</dd>
+          <dt>Base year</dt><dd>2000 · Ecosim fitted to 1950–1996</dd>
+          <dt>Papers</dt><dd><a href="https://doi.org/10.1016/j.ecolmodel.2023.110358" target="_blank" rel="noopener">Ecological Modelling, 2023</a> · <a href="https://doi.org/10.3354/meps14868" target="_blank" rel="noopener">MEPS, 2025</a></dd>
+        </dl></details>
+        <div class="inline-photo">
+          <figure><img src="img/barents-winter-fjord.jpg" alt="Snow-covered shore of an Arctic fjord with mountains under a blue sky" width="1024" height="768"><figcaption>Winter on a fjord in Troms, northern Norway.</figcaption></figure>
+          <figure><img src="img/gallery/g-kvaloya-moon.jpg" alt="Moonrise over a calm Arctic fjord with snowy hills" width="1200" height="900"><figcaption>Moonrise over a fjord in Troms, January.</figcaption></figure>
+        <figure><img src="img/me-uit-office.jpg" alt="Marcela at her desk at UiT with Ecospace maps of the Barents Sea on screen" width="1000" height="750"><figcaption>Running the Barents Sea Ecospace model at UiT, Tromsø.</figcaption></figure>
+        <figure><img src="img/me-tromso-fjord.jpg" alt="Marcela in front of a snowy fjord near Tromsø" width="1000" height="750"><figcaption>Fjord near Tromsø, Norway.</figcaption></figure>
+        </div>
+      </div>
+      <div class="figs two">
+        <figure style="grid-column:1/-1"><img class="map" src="img/barents-study-area.webp" alt="The Barents Sea Large Marine Ecosystem in the Arctic, with bathymetry, Svalbard, Franz Josef Land, Novaya Zemlya and the polar front" width="1550" height="1442"><figcaption>The Barents Sea Large Marine Ecosystem (LME) in the Arctic, with depth and the polar front.</figcaption></figure>
+        <figure style="grid-column:1/-1"><img src="img/barents-foodweb.png" alt="Simplified Barents Sea food web from ice algae and phytoplankton to polar bear, with harvested groups marked" width="1400" height="1148"><figcaption>Simplified Barents Sea food web; H marks harvested groups.</figcaption></figure>
+      </div>
+    </div>
+
+    <div class="region">
+      <div>
+        <span class="eyebrow">2005 – 2016 · UNICAMP, UBC</span>
+        <h3>Southern Brazilian shelf and slope</h3>
+        <p>My first model, from my PhD, describes who eats whom among the fish and invertebrates living near the bottom on the outer shelf and upper slope of southeastern Brazil. It is based on stomach contents collected by the REVIZEE programme. Later I used it to ask how changes in plankton production could affect fish such as the blackfin goosefish.</p>
+        <details class="glance"><summary>The model at a glance</summary><dl class="specs">
+          <dt>Area</dt><dd>Southeastern Brazilian Bight · 22–28°S</dd>
+          <dt>Depth</dt><dd>outer shelf and upper slope (~100–600 m)</dd>
+          <dt>Data</dt><dd>REVIZEE diet studies (stomach contents)</dd>
+          <dt>Key paper</dt><dd><a href="https://doi.org/10.3989/scimar.03359.26A" target="_blank" rel="noopener">Scientia Marina, 2012</a></dd>
+        </dl></details>
+        <div class="inline-photo">
+          <figure><img src="img/gallery/g-ubatuba.jpg" alt="Waves breaking on a rocky shore with forested mountains behind" width="1200" height="675"><figcaption>The southeast coast at Ubatuba, São Paulo.</figcaption></figure>
+          <figure><img src="img/gallery/g-floripa-dunes.jpg" alt="Coastal dunes under a cloudy sky" width="1200" height="900"><figcaption>Coastal dunes in Florianópolis, at the southern edge of the model area.</figcaption></figure>
+          <figure><img src="img/br-boat-bow.jpg" alt="Marcela sitting on the bow net of a boat in the Cananéia estuary with forested mountains behind" width="800" height="600"><figcaption>On the bow of a boat in the Cananéia estuary, São Paulo, on the coast of the model area.</figcaption></figure>
+          <figure><img src="img/br-mangrove-sunset.jpg" alt="Sunset over a tidal channel and sandbank with mangroves" width="800" height="600"><figcaption>Sunset over the mangroves of Cananéia, São Paulo.</figcaption></figure>
+        </div>
+
+      </div>
+      <div class="figs">
+      <figure style="grid-column:1/-1"><img src="img/brazil-map-full.jpg" alt="Map of the southeastern Brazilian Ecopath model area on the outer shelf and upper slope between Cabo Frio and Itajaí, with depth and a globe showing its location in the South Atlantic" width="1600" height="1236"><figcaption>Model area on the outer shelf and upper slope off southeastern Brazil, between Cabo Frio and Itajaí (22–28°S), with depth.</figcaption></figure>
+      <figure><img src="img/brazil-foodweb.png" alt="Ecopath flow diagram of the southeastern Brazilian demersal food web, with circles sized and coloured by biomass" width="835" height="554"><figcaption>The Ecopath food web, with groups placed by trophic level and coloured by biomass.</figcaption></figure>
+      </div>
+    </div>
+
+    <h3 class="sub">Projects</h3>
+    <div class="projects">
+      <article><img class="plogo" src="img/logos/spaceparti.png" alt="SpaCeParti logo" width="402" height="192"><span class="mono">2023 – present</span><h4><a href="https://www.sustainmare.de/104231/index.php.en" target="_blank" rel="noopener">SpaCeParti</a></h4><p>How to share the space of the Western Baltic as the climate changes, worked out together with the people who use it. Part of the DAM SustainMare mission. I build the food-web and fisheries models.</p></article>
+      <article><img class="plogo" src="img/logos/cammarada.png" alt="CAMMARADA logo" width="393" height="192"><span class="mono">2025 – present</span><h4><a href="https://www.instagram.com/cammarada.oficial/" target="_blank" rel="noopener">CAMMARADA</a></h4><p>A Brazilian project on marine shrimp fisheries: assessment, guidelines and actions. I work on the ecological modelling.</p></article>
+      <article><img class="plogo" src="img/logos/ecoscope.png" alt="EcoScope logo" width="438" height="171"><span class="mono">2023 – 2025</span><h4><a href="https://ecoscopium.eu/" target="_blank" rel="noopener">EcoScope</a></h4><p>An EU Horizon 2020 project on ecosystem-based fisheries management. I worked on ecosystem models and management scenarios.</p></article>
+      <article><img class="plogo" src="img/logos/nansen.png" alt="The Nansen Legacy logo" width="241" height="192"><span class="mono">2020 – 2023</span><h4><a href="https://arvenetternansen.com" target="_blank" rel="noopener">The Nansen Legacy</a></h4><p>Norway's large research project on the changing Arctic. I modelled the future Barents Sea.</p></article>
+    </div>
+    <div class="next"><a href="#publications" data-tab="publications">Next: Publications →</a></div>
+  </div>
+</section>
+
+<section id="publications" data-pane="publications">
+  <div class="wrap">
+    <div class="sec-head"><span class="eyebrow">Publications</span><div><h2>Peer-reviewed articles</h2><p>Also on <a href="https://orcid.org/0000-0002-6213-1271" target="_blank" rel="noopener">ORCID</a> and <a href="https://scholar.google.com/citations?user=rxmQMeQAAAAJ" target="_blank" rel="noopener">Google Scholar</a>.</p></div></div>
+    <ol class="list">
+<li><span class="yr">2026</span><div class="ref">Möllmann C., Blenckner T., Clemmesen C., Conradt J., Funk N., Funk S., Gottschalk J., de Graaf K., Gutte H., Janssen G., Kotterba P., Madiraca F., Mittermayer F., <strong>Nascimento M.C.</strong>, Otto S.A., Pinto G., Riekhof M.-C., Schwermer H., Scotti M., Wagner-Ahlfs C., Voss R. <span class="ti">Scenario planning to support the transformative adaptation of a collapsing fishery.</span> <em>npj Ocean Sustainability</em>. <a href="https://doi.org/10.1038/s44183-026-00188-z" target="_blank" rel="noopener">doi:10.1038/s44183-026-00188-z</a></div></li>
+<li><span class="yr">2025</span><div class="ref"><strong>Nascimento M.C.</strong>, Gonçalves M.P., Lieser J., Mayer I., Scotti M. <span class="ti">Extending the human pressures-species response system in the MSP Challenge ecosystem simulation platform.</span> <em>Frontiers in Marine Science 12: 1561347</em>. <a href="https://doi.org/10.3389/fmars.2025.1561347" target="_blank" rel="noopener">doi:10.3389/fmars.2025.1561347</a></div></li>
+<li><span class="yr">2025</span><div class="ref">Årthun M., Dinh K.V., Dörr J., Dupont N., Fransner F., Nilsen I., Renaud P.E., Skogen M.D., Assmy P., Chierici M., Duarte P., Fransson A., Hansen C., <strong>Nascimento M.C.</strong>, Pedersen T., Smedsrud L.H., Varpe Ø., Cnossen F. <span class="ti">The future Barents Sea – a synthesis of physical, biogeochemical, and ecological changes toward 2050 and 2100.</span> <em>Elementa: Science of the Anthropocene 13(1): 00046</em>. <a href="https://doi.org/10.1525/elementa.2024.00046" target="_blank" rel="noopener">doi:10.1525/elementa.2024.00046</a></div></li>
+<li><span class="yr">2025</span><div class="ref"><strong>Nascimento M.C.</strong>, Fransner F., Hordoir R., Skogen M.D., Primicerio R., Pedersen T. <span class="ti">Future poleward distribution shifts of community and functional groups in the Barents Sea modelled under different climate and fisheries scenarios.</span> <em>Marine Ecology Progress Series 763: 1–25</em>. <a href="https://doi.org/10.3354/meps14868" target="_blank" rel="noopener">doi:10.3354/meps14868</a></div></li>
+<li><span class="yr">2023</span><div class="ref"><strong>Nascimento M.C.</strong>, Husson B., Guillet L., Pedersen T. <span class="ti">Modelling the spatial shifts of functional groups in the Barents Sea using a climate-driven spatial food web model.</span> <em>Ecological Modelling 481: 110358</em>. <a href="https://doi.org/10.1016/j.ecolmodel.2023.110358" target="_blank" rel="noopener">doi:10.1016/j.ecolmodel.2023.110358</a></div></li>
+<li><span class="yr">2021</span><div class="ref">Pedersen T., Mikkelsen N., Lindstrøm U., Renaud P.E., <strong>Nascimento M.C.</strong>, Blanchet M.-A., Ellingsen I.H., Jørgensen L.L., Blanchet H. <span class="ti">Overexploitation, recovery, and warming of the Barents Sea ecosystem during 1950–2013.</span> <em>Frontiers in Marine Science 8: 732637</em>. <a href="https://doi.org/10.3389/fmars.2021.732637" target="_blank" rel="noopener">doi:10.3389/fmars.2021.732637</a></div></li>
+<li><span class="yr">2012</span><div class="ref">Corte G.N., <strong>Nascimento M.C.</strong>, Pavani L., Leite F.P.P. <span class="ti">Crustáceos associados à macroalga Ulva spp. em praias com diferentes características ambientais.</span> <span class="en">[Crustaceans associated with Ulva spp. macroalgae on beaches with different environmental conditions]</span> <em>Bioikos 26: 101–111</em>. <a href="https://seer.sis.puc-campinas.edu.br/bioikos/article/view/1758" target="_blank" rel="noopener">link</a></div></li>
+<li><span class="yr">2012</span><div class="ref"><strong>Nascimento M.C.</strong>, Velasco G., Okey T.A., Christensen V., Amaral A.C.Z. <span class="ti">Trophic model of the outer continental shelf and upper slope demersal community of the southeastern Brazilian Bight.</span> <em>Scientia Marina 76(4): 736–779</em>. <a href="https://doi.org/10.3989/scimar.03359.26A" target="_blank" rel="noopener">doi:10.3989/scimar.03359.26A</a></div></li>
+<li><span class="yr">2007</span><div class="ref"><strong>Nascimento M.C.</strong>, Alcantara S.F., Haddad C.R.B., Martins F.R. <span class="ti">Allelopathic potential of Pouteria torta (Mart.) Radlk., a species of the Brazilian cerrado.</span> <em>Allelopathy Journal 20: 279–285</em>.</div></li>
+    </ol>
+    <h3 class="sub">Book chapter, proceedings and extended abstracts</h3>
+    <ol class="list">
+<li><span class="yr">2019</span><div class="ref"><span class="tag">Proceedings</span>Braz S.N., Braz J.C.R., <strong>Nascimento M.C.</strong> <span class="ti">Casas biossustentáveis: resíduos reciclados e telhado verde.</span> <span class="en">[Biosustainable houses: recycled waste and green roofs]</span> <em>XXI International Meeting on Business Management and the Environment (ENGEMA), São Paulo, Brazil</em>. <a href="https://engemausp.submissao.com.br/21/anais/arquivos/133.pdf" target="_blank" rel="noopener">link</a></div></li>
+<li><span class="yr">2015</span><div class="ref"><span class="tag">Extended abstract</span><strong>Nascimento M.C.</strong>, Amaral A.C.Z. <span class="ti">Padrão circadiano de atividade alimentar da abrótea-de-profundidade.</span> <span class="en">[Circadian feeding pattern of the Brazilian codling]</span> <em>XII Brazilian Congress of Ecology</em>. <a class="pdf" href="files/nascimento_2015_poster_CEB.pdf" target="_blank" rel="noopener">PDF</a></div></li>
+<li><span class="yr">2015</span><div class="ref"><span class="tag">Extended abstract</span>Castanho G., <strong>Nascimento M.C.</strong> <span class="ti">Relação fauna, flora e rodovias: estudo de caso em uma rodovia no Cerrado brasileiro.</span> <span class="en">[Fauna, flora and roads: a case study on a road in the Brazilian Cerrado]</span> <em>XII Brazilian Congress of Ecology</em>. <a class="pdf" href="files/castanho_nascimento_2015_talk_CEB.pdf" target="_blank" rel="noopener">slides PDF</a> <a class="pdf" href="files/castanho_nascimento_2015_poster_CEB.pdf" target="_blank" rel="noopener">poster PDF</a></div></li>
+<li><span class="yr">2014</span><div class="ref"><span class="tag">Book chapter</span>Levy L.O., Monteiro G., <strong>Nascimento M.C.</strong> <span class="ti">A lontra.</span> <span class="en">[The river otter]</span> <em>In: Torres R.B., Adami S.F., Coelho R.M. (orgs). Atlas socioambiental da Bacia do Rio Anhumas. 1st ed. Campinas: Pontes Editora. ISBN 978-85-7113-504-8</em>.</div></li>
+<li><span class="yr">2014</span><div class="ref"><span class="tag">Extended abstract</span><strong>Nascimento M.C.</strong>, Okey T.A., Velasco G. <span class="ti">Potential impacts of global changes on a Brazilian continental shelf and slope community.</span> <em>Ecopath 30 Years Conference, Barcelona. Fisheries Centre Research Reports 22: 165–167, Barcelona, Spain</em>. <a class="pdf" href="files/nascimento_2014_poster_Ecopath30.pdf" target="_blank" rel="noopener">poster PDF</a> <a class="pdf" href="files/nascimento_2014_slides_Ecopath30.pdf" target="_blank" rel="noopener">slides PDF</a></div></li>
+<li><span class="yr">2009</span><div class="ref"><span class="tag">Proceedings</span><strong>Nascimento M.C.</strong>, Amaral A.C.Z., Velasco G. <span class="ti">Análise e modelagem das interações tróficas de peixes demersais no Sudeste-Sul do Brasil.</span> <span class="en">[Trophic modelling of the demersal fish community of southern Brazil]</span> <em>III Latin American Congress of Ecology</em>. <a class="pdf" href="files/nascimento_2009_poster_CLAE.pdf" target="_blank" rel="noopener">PDF</a></div></li>
+<li><span class="yr">2009</span><div class="ref"><span class="tag">Proceedings</span><strong>Nascimento M.C.</strong>, Cortinoz J., Oliveira C.B. <span class="ti">Formigas em embaúbas: onde fica a sala de jantar?.</span> <span class="en">[Ants in Cecropia: where is the dining room?]</span> <em>IX Brazilian Congress of Ecology</em>. <a class="pdf" href="files/nascimento_2009_poster_CEB.pdf" target="_blank" rel="noopener">PDF</a></div></li>
+<li><span class="yr">2007</span><div class="ref"><span class="tag">Extended abstract</span><strong>Nascimento M.C.</strong>, Amaral A.C.Z. <span class="ti">Atividade alimentar diária do peixe galo-de-fundo (Antigonia capros) na região sudeste e sul do Brasil.</span> <span class="en">[Daily feeding activity of the deepbody boarfish (Antigonia capros) in southern Brazil]</span> <em>Latin American Congress of Marine Sciences (COLACMAR)</em>. <a class="pdf" href="files/nascimento_2007_poster_COLACMAR.pdf" target="_blank" rel="noopener">PDF</a></div></li>
+    </ol>
+    <div class="next"><a href="#talks" data-tab="talks">Next: Talks &amp; posters →</a></div>
+  </div>
+</section>
+
+<section id="talks" data-pane="talks">
+  <div class="wrap">
+    <div class="sec-head"><span class="eyebrow">Talks &amp; posters</span><div><h2>Conference presentations</h2><p>Where I have shared the models: international conferences and project meetings.</p></div></div>
+    <div class="talks">
+      <div style="min-width:0">
+        <ol class="list">
+<li><span class="yr">2026</span><div class="ref"><span class="tag">Poster</span><strong>Nascimento M.C.</strong>, Pinto G., Gröger M., Papaioannou P., Mittermayer F., Scotti M. <span class="ti">Fisheries and climate shape the future of western Baltic species – a spatially explicit trophic approach.</span> <em>SustainMare Interim Meeting, Oldenburg, Germany</em>. <a href="https://www.sustainmare.de/108940/index.php.en" target="_blank" rel="noopener">link</a> <a class="pdf" href="files/nascimento_etal_2026_poster_SustainMare.pdf" target="_blank" rel="noopener">poster PDF</a></div></li>
+<li><span class="yr">2026</span><div class="ref"><span class="tag">Talk</span><strong>Nascimento M.C.</strong>, Scotti M. <span class="ti">Fisheries and climate shape the future of western Baltic species – a spatially explicit trophic approach.</span> <em>SustainMare Interim Meeting, Oldenburg, Germany</em>. <a href="https://www.sustainmare.de/108940/index.php.en" target="_blank" rel="noopener">link</a> <a class="pdf" href="files/nascimento_scotti_2026_talk_SustainMare.pdf" target="_blank" rel="noopener">slides PDF</a></div></li>
+<li><span class="yr">2024</span><div class="ref"><span class="tag">Poster</span><strong>Nascimento M.C.</strong>, Gonçalves M.P., Mayer I., Scotti M. <span class="ti">Western Baltic Sea dynamics represented in the MSP Challenge serious game.</span> <em>sJK Annual Meeting, DAM research mission SustainMare, Hamburg, Germany</em>. <a href="https://www.sustainmare.de/108940/index.php.en" target="_blank" rel="noopener">link</a> <a class="pdf" href="files/nascimento_etal_2024_poster_MSPChallenge_sJK.pdf" target="_blank" rel="noopener">poster PDF</a></div></li>
+<li><span class="yr">2024</span><div class="ref"><span class="tag">Talk</span><strong>Nascimento M.C.</strong>, Fransner F., Hordoir R., Skogen M.D., Primicerio R., Pedersen T. <span class="ti">Multiple stressors in a future warmer Barents Sea: how can distributions of functional groups be affected by low and high carbon emissions scenarios?.</span> <em>Ecopath 40 Years Symposium, Ostend, Belgium</em>. <a href="https://www.ecopath40.org/abstracts/book-of-abstracts" target="_blank" rel="noopener">link</a> <a class="pdf" href="files/nascimento_2024_talk_Ecopath40_Barents.pdf" target="_blank" rel="noopener">slides PDF</a></div></li>
+<li><span class="yr">2024</span><div class="ref"><span class="tag">Poster</span><strong>Nascimento M.C.</strong>, Scotti M. <span class="ti">Multiple stressors in the future Western Baltic Sea: a climate-driven ecosystem model.</span> <em>Ecopath 40 Years Symposium, Ostend, Belgium</em>. <a href="https://www.ecopath40.org/abstracts/book-of-abstracts" target="_blank" rel="noopener">link</a> <a class="pdf" href="files/nascimento_scotti_2024_poster_Ecopath40_WBS.pdf" target="_blank" rel="noopener">poster PDF</a></div></li>
+<li><span class="yr">2024</span><div class="ref"><span class="tag">Talk</span>Pedersen T., <strong>Nascimento M.C.</strong>, Mortensen S., Fransner F. <span class="ti">Future ecosystem effects of warming in the Barents Sea modelled by a climate-driven dynamic mass-balance model.</span> <em>Ecopath 40 Years Symposium, Ostend, Belgium</em>. <a href="https://www.ecopath40.org/abstracts/book-of-abstracts" target="_blank" rel="noopener">link</a></div></li>
+<li><span class="yr">2023</span><div class="ref"><span class="tag">Talk</span><strong>Nascimento M.C.</strong>, Scotti M. <span class="ti">Multiple stressors in the future Western Baltic Sea: a climate-driven ecosystem model.</span> <em>3rd Western Baltic Cod Forum Meeting, Kiel, Germany</em>. <a class="pdf" href="files/nascimento_scotti_2023_talk_WBCF.pdf" target="_blank" rel="noopener">slides PDF</a></div></li>
+<li><span class="yr">2023</span><div class="ref"><span class="tag">Talk</span><strong>Nascimento M.C.</strong>, Pedersen T., Fransner F., Primicerio R., Hordoir R., Skogen M.D. <span class="ti">How can functional groups be affected by low and high carbon emissions scenarios in the Barents Sea?.</span> <em>Nansen Legacy Symposium: Towards the new Arctic Ocean – Past, Present, Future (plenary), Tromsø, Norway</em>. <a href="https://www.hi.no/en/hi/about-us/events/the-nansen-legacy-symposium" target="_blank" rel="noopener">link</a></div></li>
+<li><span class="yr">2023</span><div class="ref"><span class="tag">Poster</span><strong>Nascimento M.C.</strong>, Scotti M. <span class="ti">A climate-driven ecosystem model to predict future behaviour of trophic groups in the Western Baltic Sea under multiple stressors.</span> <em>SustainMare Mid-term Conference</em>. <a href="https://www.sustainmare.de/111353/index.php.en" target="_blank" rel="noopener">link</a> <a class="pdf" href="files/nascimento_scotti_2023_poster_SustainMare.pdf" target="_blank" rel="noopener">poster PDF</a></div></li>
+<li><span class="yr">2023</span><div class="ref"><span class="tag">Talk</span><strong>Nascimento M.C.</strong>, Pedersen T., Fransner F., Primicerio R., Skogen M.D. <span class="ti">Medium and long-term effects of climate change on functional group distributions in the Barents Sea under scenarios of low and high carbon emissions.</span> <em>Nansen Legacy Annual Meeting, Oslo, Norway</em>.</div></li>
+<li><span class="yr">2023</span><div class="ref"><span class="tag">Talk</span>Pedersen T., <strong>Nascimento M.C.</strong>, Mortensen S., Fransner F. <span class="ti">Future ecosystem states in the Barents Sea modelled by a climate-driven dynamic mass-balance food-web model.</span> <em>Nansen Legacy Annual Meeting, Oslo, Norway</em>.</div></li>
+<li><span class="yr">2023</span><div class="ref"><span class="tag">Talk</span><strong>Nascimento M.C.</strong>, Pedersen T., Husson B., Guillet L. <span class="ti">Can a spatial trophic ecosystem model represent observed changes in functional group distribution due to environmental changes in the Barents Sea Large Marine Ecosystem?.</span> <em>ECCWO-5 – Effects of Climate Change on the World&#x27;s Ocean, International Symposium, Bergen, Norway</em>. <a href="https://meetings.pices.int/publications/presentations/2023-ECCWO5" target="_blank" rel="noopener">link</a> <a class="pdf" href="files/nascimento_2023_talk_ECCWO5.pdf" target="_blank" rel="noopener">slides PDF</a></div></li>
+<li><span class="yr">2022</span><div class="ref"><span class="tag">Talk</span><strong>Nascimento M.C.</strong>, Husson B., Guillet L., Pedersen T. <span class="ti">Evaluating a climate-driven spatial food web model for the Barents Sea by comparison with field surveyed spatial distributions for functional groups.</span> <em>Nansen Legacy Annual Meeting, Bergen, Norway</em>. <a href="https://arvenetternansen.com/2022/12/13/nansen-legacy-annual-meeting-2022-in-bergen/" target="_blank" rel="noopener">link</a> <a class="pdf" href="files/nascimento_2022_talk_NansenLegacy_AM.pdf" target="_blank" rel="noopener">slides PDF</a></div></li>
+<li><span class="yr">2022</span><div class="ref"><span class="tag">Poster</span>Pedersen T., Mortensen S., Pedersen T., <strong>Nascimento M.C.</strong> <span class="ti">Modelling future ecosystem dynamics in the Barents Sea using Ecopath with Ecosim.</span> <em>Nansen Legacy Annual Meeting, Bergen, Norway</em>. <a href="https://arvenetternansen.com/2022/12/13/nansen-legacy-annual-meeting-2022-in-bergen/" target="_blank" rel="noopener">link</a></div></li>
+<li><span class="yr">2022</span><div class="ref"><span class="tag">Poster</span><strong>Nascimento M.C.</strong>, Husson B., Guillet L., Pedersen T. <span class="ti">Modelled species distributions and changes in water temperature and ice coverage in the Barents Sea in the last decade.</span> <em>Symposium on Decadal Variability of the North Atlantic and its Marine Ecosystems: 2010–2019, Bergen, Norway</em>. <a class="pdf" href="files/nascimento_2022_poster_ICES_decadal.pdf" target="_blank" rel="noopener">poster PDF</a></div></li>
+<li><span class="yr">2022</span><div class="ref"><span class="tag">Talk</span><strong>Nascimento M.C.</strong>, Pedersen T., Husson B., Guillet L. <span class="ti">Can we model the spatial distribution of ecological groups during the last two decades based on spatial environmental drivers?.</span> <em>Arctic Frontiers Conference, Tromsø, Norway</em>. <a class="pdf" href="files/nascimento_2022_talk_ArcticFrontiers.pdf" target="_blank" rel="noopener">slides PDF</a></div></li>
+<li><span class="yr">2021</span><div class="ref"><span class="tag">Talk</span><strong>Nascimento M.C.</strong>, Primicerio R., Pedersen T. <span class="ti">Modelled vs natural spatial distributions: how far is reality from the Ecospace Barents Sea model?.</span> <em>Nansen Legacy Annual Meeting, Trondheim, Norway</em>. <a class="pdf" href="files/nascimento_2021_talk_NansenLegacy_AM.pdf" target="_blank" rel="noopener">slides PDF</a></div></li>
+        </ol>
+        <details>
+          <summary>Earlier presentations (2005 – 2019)</summary>
+          <ol class="list">
+<li><span class="yr">2016</span><div class="ref"><span class="tag">Talk</span><strong>Nascimento M.C.</strong>, Okey T.A. <span class="ti">Accounting for primary production changes improves the skill of a Brazilian continental shelf fishery ecosystem model to understand changes in blackfin goosefish (Lophius gastrophysus).</span> <em>5th International EcoSummit, Montpellier, France</em>. <a class="pdf" href="files/nascimento_2016_poster_EcoSummit.pdf" target="_blank" rel="noopener">PDF</a></div></li>
+<li><span class="yr">2016</span><div class="ref"><span class="tag">Poster</span><strong>Nascimento M.C.</strong>, Amaral A.C.Z. <span class="ti">Alimentación en mar profundo: la dieta de tres peces demersales del sureste de Brasil.</span> <span class="en">[Deep-sea feeding: the diet of three demersal fishes of southeastern Brazil]</span> <em>XXXVI Congreso de Ciencias del Mar, Concepción, Chile</em>. <a class="pdf" href="files/nascimento_2016_poster_CienciasDelMar.pdf" target="_blank" rel="noopener">PDF</a></div></li>
+<li><span class="yr">2015</span><div class="ref"><span class="tag">Poster</span>Meloni A.L.R., <strong>Nascimento M.C.</strong>, Junqueira L.K., Prado A.M. <span class="ti">Uso de enriquecimento ambiental em jandaias maracanãs (Aratinga leucophthalma) do parque ecológico municipal de Paulínia &#x27;Armando Muller&#x27;, São Paulo.</span> <span class="en">[Environmental enrichment for white-eyed parakeets in the Paulínia municipal zoo]</span> <em>39th Congress of the Brazilian Society of Zoos and Aquariums, Foz do Iguaçu, Brazil</em>.</div></li>
+<li><span class="yr">2015</span><div class="ref"><span class="tag">Poster</span><strong>Nascimento M.C.</strong>, Amaral A.C.Z. <span class="ti">Padrão circadiano de atividade alimentar da abrótea-de-profundidade.</span> <span class="en">[Daily feeding pattern of the codling Urophycis mystacea]</span> <em>Brazilian Congress of Ecology</em>.</div></li>
+<li><span class="yr">2015</span><div class="ref"><span class="tag">Talk</span>Castanho G.G., <strong>Nascimento M.C.</strong> <span class="ti">Relação fauna, flora e rodovias: estudo de caso em uma rodovia no Cerrado brasileiro.</span> <span class="en">[Fauna, flora and roads: a case study on a highway in the Brazilian Cerrado]</span> <em>Brazilian Congress of Ecology</em>.</div></li>
+<li><span class="yr">2013</span><div class="ref"><span class="tag">Talk</span>Velasco G., <strong>Nascimento M.C.</strong>, Castello J., Amaral A.C.Z., Araujo J.N., Okey T.A., Christensen V., Pauly D. <span class="ti">Usos múltiples de modelos ecotróficos para describir ecosistemas marinos en el S y SE de Brasil, evaluar los efectos de la pesca y pensar estrategias de manejo.</span> <em>MODELCOBA, Mar del Plata, Argentina</em>. <a class="pdf" href="files/nascimento_2013_MODELCOBA.pdf" target="_blank" rel="noopener">PDF</a></div></li>
+<li><span class="yr">2009</span><div class="ref"><span class="tag">Poster</span><strong>Nascimento M.C.</strong>, Amaral A.C.Z. <span class="ti">Dieta alimentar de Synagrops bellus (Perciformes: Acropomatidae).</span> <span class="en">[Diet of Synagrops bellus (Perciformes: Acropomatidae)]</span> <em>II Brazilian Congress of Marine Biology</em>. <a class="pdf" href="files/nascimento_2009_poster_CBBM.pdf" target="_blank" rel="noopener">PDF</a></div></li>
+<li><span class="yr">2009</span><div class="ref"><span class="tag">Poster</span>Corte G.N., <strong>Nascimento M.C.</strong>, Pavani L., Leite F.P.P. <span class="ti">Crustáceos peracáridos associados à Ulva spp. em duas praias de São Sebastião, litoral norte do Estado de São Paulo.</span> <span class="en">[Peracarid crustaceans associated with Ulva spp. on two beaches in São Sebastião, São Paulo]</span> <em>II Brazilian Congress of Marine Biology</em>.</div></li>
+<li><span class="yr">2009</span><div class="ref"><span class="tag">Poster</span><strong>Nascimento M.C.</strong>, Cortinoz J.R., Barbosa-Oliveira C. <span class="ti">Formigas em embaúbas: onde fica a sala de jantar?.</span> <span class="en">[Ants in Cecropia trees: where is the dining room?]</span> <em>Brazilian Congress of Ecology</em>.</div></li>
+<li><span class="yr">2009</span><div class="ref"><span class="tag">Poster</span><strong>Nascimento M.C.</strong>, Amaral A.C.Z., Velasco G. <span class="ti">Análise e modelagem das interações tróficas de peixes demersais no Sudeste-Sul do Brasil.</span> <span class="en">[Analysis and modelling of trophic interactions of demersal fishes in southern Brazil]</span> <em>Latin American Congress of Ecology</em>.</div></li>
+<li><span class="yr">2007</span><div class="ref"><span class="tag">Poster</span><strong>Nascimento M.C.</strong>, Amaral A.C.Z. <span class="ti">Atividade alimentar diária do peixe galo-de-fundo (Antigonia capros) na região Sudeste-Sul do Brasil.</span> <span class="en">[Daily feeding activity of the deepbody boarfish in southern Brazil]</span> <em>Latin American Congress of Marine Sciences (COLACMAR), Florianópolis, Brazil</em>.</div></li>
+<li><span class="yr">2006</span><div class="ref"><span class="tag">Poster</span><strong>Nascimento M.C.</strong>, Setz E.Z.F. <span class="ti">O que come uma lontra suburbana?.</span> <span class="en">[What does a suburban river otter eat?]</span> <em>XXVI Brazilian Congress of Zoology</em>.</div></li>
+<li><span class="yr">2006</span><div class="ref"><span class="tag">Poster</span><strong>Nascimento M.C.</strong>, Amaral A.C.Z. <span class="ti">Dieta alimentar de duas espécies de peixes demersais da região Sudeste-Sul do Brasil.</span> <span class="en">[Diet of two demersal fish species of southern Brazil]</span> <em>XXVI Brazilian Congress of Zoology</em>. <a class="pdf" href="files/nascimento_2006_poster_CBZ.pdf" target="_blank" rel="noopener">PDF</a></div></li>
+<li><span class="yr">2005</span><div class="ref"><span class="tag">Poster</span><strong>Nascimento M.C.</strong>, Amaral A.C.Z. <span class="ti">Comportamento alimentar de Urophycis mystacea na plataforma continental externa e talude superior da região Sudeste-Sul do Brasil.</span> <span class="en">[Feeding behaviour of Urophycis mystacea on the outer shelf and upper slope of southern Brazil]</span> <em>II Symposium of Marine Biology and Coastal Management</em>. <a class="pdf" href="files/nascimento_2005_poster_SBMGC.pdf" target="_blank" rel="noopener">PDF</a></div></li>
+<li><span class="yr">2005</span><div class="ref"><span class="tag">Poster</span><strong>Nascimento M.C.</strong>, Haddad C.R.B., Martins F.R. <span class="ti">Determinação do potencial alelopático de Pouteria torta (Sapotaceae).</span> <em>Congresso Aberto aos Estudantes de Biologia (CAEB), UNICAMP, Campinas, Brazil</em>. <a class="pdf" href="files/nascimento_2005_poster_CAEB.pdf" target="_blank" rel="noopener">PDF</a></div></li>
+          </ol>
+        </details>
+        <p class="note">Invited talks, school visits and public outreach are under <a href="#outreach" data-tab="outreach">Outreach</a>.</p>
+      </div>
+      
+            <div class="shots">
+          <figure><img src="img/poster-sustainmare-2026.jpg" alt="Marcela next to her poster on Western Baltic fisheries and climate" loading="lazy"><figcaption><span class="mono">2026</span> · Poster, SustainMare Interim Meeting, Oldenburg</figcaption></figure>
+          <figure><img src="img/talk-eccwo5.jpg" alt="Marcela presenting projected capelin distribution shifts at ECCWO-5" loading="lazy"><figcaption><span class="mono">2023</span> · Talk, ECCWO-5, Effects of Climate Change on the World's Ocean, Bergen</figcaption></figure>
+          <figure><img src="img/talk-nansen-symposium-2023.jpg" alt="Marcela presenting the Barents Sea food web on stage" loading="lazy"><figcaption><span class="mono">2023</span> · Plenary talk, <a href="https://www.hi.no/en/hi/about-us/events/the-nansen-legacy-symposium" target="_blank" rel="noopener">Nansen Legacy Symposium</a>, Tromsø</figcaption></figure>
+          <figure><img src="img/poster-decadal-2022.jpg" alt="Marcela smiling beside her Barents Sea poster" loading="lazy"><figcaption><span class="mono">2022</span> · Poster, ICES Symposium on Decadal Variability of the North Atlantic, Bergen</figcaption></figure>
+          <figure><img src="img/talk-arcticfrontiers-2022.jpg" alt="Marcela speaking at Arctic Frontiers" loading="lazy"><figcaption><span class="mono">2022</span> · Talk, Arctic Frontiers, Tromsø</figcaption></figure>
+          <figure><img src="img/talk-nansen-2021.jpg" alt="Marcela presenting the Barents Sea Ecospace model" loading="lazy"><figcaption><span class="mono">2021</span> · Talk, Nansen Legacy Annual Meeting, Trondheim</figcaption></figure>
+          <figure><img src="img/poster-ecosummit-2016.jpg" alt="Marcela beside her EcoSummit poster" loading="lazy"><figcaption><span class="mono">2016</span> · Poster, EcoSummit, Montpellier</figcaption></figure>
+        </div>
+    </div>
+    <div class="next"><a href="#teaching" data-tab="teaching">Next: Teaching →</a></div>
+  </div>
+</section>
+
+<section id="teaching" data-pane="teaching">
+  <div class="wrap">
+    <div class="sec-head"><span class="eyebrow">Teaching</span><div><h2>Courses and supervision</h2><p>These days I teach Ecospace to master's students. Before that, I spent years teaching ecology, environmental policy and statistics to undergraduates in Brazil. Here is everything I have taught.</p></div></div>
+    <div class="teach-wrap"><div style="min-width:0">
+    <ol class="list">
+<li><span class="yr">2024</span><div><strong>Federal University of Rio Grande do Norte (UFRN), Brazil</strong><span class="meta">MSc · in Portuguese</span><ul class="courses"><li><span class="cy">2024</span>Ecological modelling (ECL0063) – Ecospace module</li></ul></div></li>
+<li><span class="yr">2021–2022</span><div><strong>UiT The Arctic University of Norway</strong><span class="meta">MSc · in English</span><ul class="courses"><li><span class="cy">2021–2022</span>Food-webs and fisheries (BIO-3516) – Ecospace module and lab classes</li></ul></div></li>
+<li><span class="yr">2018–2019</span><div><strong>Federal Institute of São Paulo (IF-SP), Brazil</strong><span class="meta">Extension course · in Portuguese</span><ul class="courses"><li><span class="cy">2018–2019</span>Seed production – restoration ecology (modules I and II)</li></ul></div></li>
+<li><span class="yr">2013–2017</span><div><strong>Pontifical Catholic University of Campinas (PUC-Campinas), Brazil</strong><span class="meta">Undergraduate · in Portuguese</span><ul class="courses"><li><span class="cy">2017</span>Short course on wildlife management</li><li><span class="cy">2016</span>Environmental questions under discussion</li><li><span class="cy">2016</span>Life through lenses</li><li><span class="cy">2016</span>Deciphering the biology of environmental laws</li><li><span class="cy">2015–2016</span>Sustainable development policies</li><li><span class="cy">2015–2016</span>Projects: integrative practical activities</li><li><span class="cy">2015</span>Integrating students into university life</li><li><span class="cy">2015</span>The teaching/learning process in academic training</li><li><span class="cy">2014–2016</span>Applied ecology</li><li><span class="cy">2014–2015</span>Scientific project</li><li><span class="cy">2014–2015</span>Field course in coastal ecology, Cananéia</li><li><span class="cy">2014</span>Management and environmental legislation</li><li><span class="cy">2013–2016</span>Ecology of aquatic ecosystems</li></ul></div></li>
+<li><span class="yr">2012–2013</span><div><strong>Ibirapuera University (UNIB), São Paulo, Brazil</strong><span class="meta">Undergraduate · in Portuguese</span><ul class="courses"><li><span class="cy">2013</span>Environmental studies applied to health sciences</li><li><span class="cy">2013</span>Educational practices</li><li><span class="cy">2012–2013</span>Statistics/biostatistics</li><li><span class="cy">2012–2013</span>Environmental chemistry</li><li><span class="cy">2012</span>Biochemistry</li></ul></div></li>
+    </ol>
+    <h3 class="sub">Supervision</h3>
+    <ol class="list">
+      <li><span class="yr">2024–2026</span><div><strong>MSc – Smilla Todt</strong><span class="meta">No-take marine protected areas, biodiversity and resilience to climate change in the Schleswig-Holstein Baltic Sea · Kiel University</span></div></li>
+      <li><span class="yr">2014–2016</span><div><strong>37 bachelor's theses</strong><span class="meta">Biological Sciences and Environmental Engineering · PUC-Campinas</span></div></li>
+    </ol>
+    </div>
+    <figure><img src="img/teach-boat.jpg" alt="Marcela teaching a field class on a boat in a Brazilian estuary" width="460" height="840"><figcaption>Teaching the PUC-Campinas field ecology course on the water in Cananéia, São Paulo.</figcaption>
+    <img src="img/uit-building.jpg" alt="UiT The Arctic University of Norway building in winter snow" width="700" height="933" style="margin-top:18px"><figcaption>UiT The Arctic University of Norway, Tromsø, where I taught the Ecospace module of Food webs and fisheries.</figcaption></figure>
+    </div>
+    <div class="next"><a href="#outreach" data-tab="outreach">Next: Outreach →</a></div>
+  </div>
+</section>
+
+<section id="outreach" data-pane="outreach">
+  <div class="wrap">
+    <div class="sec-head"><span class="eyebrow">Outreach</span><div><h2>Science for everyone</h2><p>Talks for schools and students, public livestreams, newspaper columns and media coverage, mostly in Portuguese for Brazilian audiences.</p></div></div>
+    <ol class="list">
+<li><span class="yr">2024</span><div class="ref"><span class="tag">Invited</span><strong>Nascimento M.C.</strong>, Scotti M. <span class="ti">Spatial climate-driven models predicting the future of the Western Baltic Sea fisheries.</span> <em>SpaCeParti Living Lab workshop</em>.</div></li>
+<li><span class="yr">2022</span><div class="ref"><span class="tag">Invited</span><strong>Nascimento M.C.</strong> <span class="ti">From the Tropic to the Arctic: Let&#x27;s do science!.</span> <em>Arctic Frontiers Pathways 2022 – Science for Schools, Tromsø, Norway</em>.</div></li>
+<li><span class="yr">2021</span><div class="ref"><span class="tag">Invited</span><strong>Nascimento M.C.</strong> <span class="ti">The Barents Sea ecosystem under the perspective of a food web and spatial modelling with Ecopath with Ecosim and Ecospace.</span> <em>ARCTOS Colloquium: Barents Sea food-web structure and quantification</em>.</div></li>
+<li><span class="yr">2021</span><div class="ref"><span class="tag">Invited</span><strong>Nascimento M.C.</strong> <span class="ti">A trajetória acadêmica de um biólogo em Meio Ambiente e Biodiversidade.</span> <span class="en">[The academic path of a biologist in environment and biodiversity]</span> <em>Vida Universitária e Desenvolvimento Integral, CEATEC, PUC-Campinas, Campinas, Brazil</em>.</div></li>
+<li><span class="yr">2020</span><div class="ref"><span class="tag">Invited</span><strong>Nascimento M.C.</strong> <span class="ti">A trajetória acadêmica de um biólogo em Meio Ambiente e Biodiversidade.</span> <span class="en">[The academic path of a biologist in environment and biodiversity]</span> <em>Biology bachelor course, Federal University of Sergipe, Brazil</em>.</div></li>
+<li><span class="yr">2020</span><div class="ref"><span class="tag">Livestream</span><strong>Nascimento M.C.</strong> <span class="ti">Biodiversidade e covid-19: o que uma coisa tem a ver com a outra?.</span> <span class="en">[Biodiversity and covid-19: what is the relationship?]</span> <em>PUC-Campinas and UN Environment livestream (World Environment Day)</em>. <a href="https://www.youtube.com/watch?v=qypVBHdukaE" target="_blank" rel="noopener">link</a> <a class="pdf" href="files/nascimento_2020_talk_biodiversidade_covid.pdf" target="_blank" rel="noopener">PDF</a></div></li>
+<li><span class="yr">2020</span><div class="ref"><span class="tag">Invited</span><strong>Nascimento M.C.</strong> <span class="ti">Biodiversidade e COVID-19: o que uma coisa tem a ver com a outra?.</span> <span class="en">[Biodiversity and COVID-19: how are they related?]</span> <em>23rd Integrated Week of CEATEC, PUC-Campinas – A post-pandemic world: challenges and strategies of innovation, Campinas, Brazil</em>.</div></li>
+<li><span class="yr">2019</span><div class="ref"><span class="tag">Invited</span><strong>Nascimento M.C.</strong> <span class="ti">Sustentabilidade ambiental: como viver de forma sustentável.</span> <span class="en">[Environmental sustainability: how to live sustainably]</span> <em>1st Environmental Week of the Brazilian Air Force</em>. <a class="pdf" href="files/nascimento_2019_talk_sustentabilidade.pdf" target="_blank" rel="noopener">PDF</a></div></li>
+<li><span class="yr">2019</span><div class="ref"><span class="tag">Media</span>Camões L. (DefesaTV) <span class="ti">Biólogo na Força Aérea Brasileira, você também pode ser um!.</span> <span class="en">[Biologist in the Brazilian Air Force: you can be one too! Interview for World Environment Day]</span> <em>DefesaTV</em>. <a href="https://www.defesa.tv.br/biologo-na-forca-aerea-brasileira-voce-tambem-pode-ser-um/" target="_blank" rel="noopener">link</a></div></li>
+<li><span class="yr">2019</span><div class="ref"><span class="tag">Media</span>Prefeitura de Salto <span class="ti">Atividade de plantio é realizada em comemoração ao Dia Mundial da Água.</span> <span class="en">[Tree-planting activity for World Water Day, with my participation as Air Force biologist and IF-SP teacher]</span> <em>Municipality of Salto, São Paulo</em>. <a href="https://salto.sp.gov.br/atividade-de-plantio-e-realizada-em-comemoracao-ao-dia-mundial-da-agua/" target="_blank" rel="noopener">link</a></div></li>
+<li><span class="yr">2017</span><div class="ref"><span class="tag">Invited</span><strong>Nascimento M.C.</strong> <span class="ti">Amigos ocultos: animais que convivemos e a importância das APPs para a manutenção dessas populações.</span> <span class="en">[Hidden friends: urban wildlife and the importance of riparian protected areas]</span> <em>VII Tecnologia em Foco, UNICAMP, Campinas, Brazil</em>. <a class="pdf" href="files/nascimento_2017_talk_amigos_ocultos.pdf" target="_blank" rel="noopener">PDF</a></div></li>
+<li><span class="yr">2016</span><div class="ref"><span class="tag">Invited</span><strong>Nascimento M.C.</strong> <span class="ti">Sustentabilidade nos tempos atuais.</span> <span class="en">[Sustainability in current times]</span> <em>Round table, Utopic Strategies: Conscious Consumption Brazil–Europe, PUC-Campinas, Campinas, Brazil</em>.</div></li>
+<li><span class="yr">2016</span><div class="ref"><span class="tag">Column</span><strong>Nascimento M.C.</strong> <span class="ti">Alimentos e agrotóxicos: uma relação histórica e danosa.</span> <span class="en">[Food and pesticides: a historical and harmful relationship]</span> <em>Jornal da PUC-Campinas</em>.</div></li>
+<li><span class="yr">2015</span><div class="ref"><span class="tag">Column</span><strong>Nascimento M.C.</strong> <span class="ti">Tecnologia e conservação da natureza: um caminho a percorrer.</span> <span class="en">[Technology and nature conservation: a way forward]</span> <em>Jornal da PUC-Campinas</em>. <a href="https://jornal.puc-campinas.edu.br/tecnologia-e-conservacao-da-natureza-um-caminho-a-percorrer-2/" target="_blank" rel="noopener">link</a> <a class="pdf" href="files/nascimento_2015_column_jornal_PUC.pdf" target="_blank" rel="noopener">PDF</a></div></li>
+<li><span class="yr">2013</span><div class="ref"><span class="tag">Invited</span><strong>Nascimento M.C.</strong> <span class="ti">Aquecimento global: o que o mar tem a ver com isso?.</span> <span class="en">[Global warming: what does the ocean have to do with it?]</span> <em>42nd Studies Week of Biological Sciences, PUC-Campinas, Campinas, Brazil</em>. <a class="pdf" href="files/nascimento_2013_talk_aquecimento_global.pdf" target="_blank" rel="noopener">PDF</a></div></li>
+<li><span class="yr">2013</span><div class="ref"><span class="tag">Media</span>IO-FURG <span class="ti">Criação de dois grupos de pesquisa no IO-FURG.</span> <span class="en">[New Aquatic Ecosystem Modelling research group at FURG, of which I am a member]</span> <em>Institute of Oceanography, Federal University of Rio Grande (FURG)</em>.</div></li>
+<li><span class="yr">2012</span><div class="ref"><span class="tag">Invited</span><strong>Nascimento M.C.</strong> <span class="ti">ISO 14000 e meio ambiente.</span> <span class="en">[ISO 14000 and the environment]</span> <em>Internal Accident Prevention Committee (CIPA), CTEEP, São Paulo, Brazil</em>. <a class="pdf" href="files/nascimento_2012_talk_ISO14000_CTEEP.pdf" target="_blank" rel="noopener">PDF</a></div></li>
+<li><span class="yr">2011</span><div class="ref"><span class="tag">Invited</span><strong>Nascimento M.C.</strong> <span class="ti">Trophic model of the demersal community of outer continental shelf and upper slope of Southeastern Brazilian Bight.</span> <em>Centro Oceanográfico de Cádiz (IEO), Cádiz, Spain</em>. <a class="pdf" href="files/nascimento_2011_talk_IEO_Cadiz.pdf" target="_blank" rel="noopener">PDF</a></div></li>
+<li><span class="yr">2006</span><div class="ref"><span class="tag">Invited</span><strong>Nascimento M.C.</strong> <span class="ti">Alimentação de peixes marinhos.</span> <span class="en">[Feeding of marine fishes]</span> <em>IV Evento Integrando a Pós-graduação em Zoologia à Graduação, UNESP</em>.</div></li>
+    </ol>
+    <div class="next"><a href="#gallery" data-tab="gallery">Next: Gallery →</a></div>
+  </div>
+</section>
+
+<section id="gallery" data-pane="gallery">
+  <div class="wrap">
+    <div class="sec-head"><span class="eyebrow">Gallery</span><div><h2>Places I work and live</h2><p>The seas behind my models, from the Brazilian coast to the Arctic. All photos are my own.</p></div></div>
+<div class="gal-region"><h3>Northern Norway</h3><span class="mono">69–70°N · Tromsø and Troms, 2021–2023</span><div class="gal"><figure><img src="img/gallery/g-tromso-aurora.jpg" alt="Aurora over Tromsø" loading="lazy"><figcaption>Tromsø, Nov 2022</figcaption></figure><figure><img src="img/sea-tromso-clear.jpg" alt="Clear fjord water over a rocky seabed" loading="lazy"><figcaption>Tromsø, May 2021</figcaption></figure><figure><img src="img/gallery/g-norway-air.jpg" alt="Snowy fjord seen from the air" loading="lazy"><figcaption>Over Troms, Jan 2023</figcaption></figure><figure><img src="img/gallery/g-kvaloya-moon.jpg" alt="Moonrise over a snowy fjord" loading="lazy"><figcaption>Troms, Jan 2023</figcaption></figure><figure><img src="img/gallery/g-troms-harbour.jpg" alt="Fishing boats in a small harbour" loading="lazy"><figcaption>Troms, Jul 2021</figcaption></figure><figure><img src="img/gallery/g-troms-farms.jpg" alt="Salmon farm pens in a fjord" loading="lazy"><figcaption>Troms, Jul 2021</figcaption></figure><figure><img src="img/gallery/g-tromso-pier.jpg" alt="Clear water under an old pier" loading="lazy"><figcaption>Tromsø, May 2021</figcaption></figure><figure><img src="img/gallery/g-tromso-sunset.jpg" alt="Sunset over Tromsø" loading="lazy"><figcaption>Tromsø</figcaption></figure><figure><img src="img/sea-ice.jpg" alt="Thin sea ice forming over clear water" loading="lazy"><figcaption>Tromsø</figcaption></figure><figure><img src="img/tromso-seaweed.jpg" alt="Rockweed on the shore" loading="lazy"><figcaption>Tromsø, Mar 2021</figcaption></figure><figure><img src="img/gallery/g-fram-amundsen.jpg" alt="Roald Amundsen&#x27;s polar fur suit at the Fram Museum" loading="lazy"><figcaption>Oslo, May 2023</figcaption></figure></div></div>
+<div class="gal-region"><h3>The Western Baltic</h3><span class="mono">54°N · Kiel and the Schleswig-Holstein coast, 2023–2025</span><div class="gal"><figure><img src="img/gallery/g-wendtorf-aurora.jpg" alt="Pink aurora over the Baltic coast" loading="lazy"><figcaption>Wendtorf, Sep 2024</figcaption></figure><figure><img src="img/gallery/g-wendtorf-waves.jpg" alt="Waves on a Baltic beach" loading="lazy"><figcaption>Wendtorf, Sep 2024</figcaption></figure><figure><img src="img/gallery/g-baltic-jelly.jpg" alt="Moon jellyfish among green algae" loading="lazy"><figcaption>Baltic coast, Jul 2023</figcaption></figure><figure><img src="img/gallery/g-eckernforde.jpg" alt="Stony Baltic shore" loading="lazy"><figcaption>Eckernförde Bay, Aug 2025</figcaption></figure><figure><img src="img/gallery/g-kiel-winter.jpg" alt="Snowy Kiel with the town hall tower" loading="lazy"><figcaption>Kiel, Dec 2023</figcaption></figure><figure><img src="img/sea-kiel-sunset.jpg" alt="Sunset over the Kiel Fjord" loading="lazy"><figcaption>Kiel Fjord</figcaption></figure></div></div>
+<div class="gal-region"><h3>Gulf of Cádiz</h3><span class="mono">36°N · ARSA bottom-trawl survey on the R/V Cornide de Saavedra, Spain, 2011</span><div class="gal"><figure><img src="img/phd-arsa-ship.jpg" alt="Marcela in front of the Spanish research vessel Cornide de Saavedra" loading="lazy"><figcaption>R/V Cornide de Saavedra, Cádiz, 2011</figcaption></figure><figure><img src="img/phd-arsa-sampling.jpg" alt="Marcela on deck among baskets of fish samples" loading="lazy"><figcaption>Sampling on deck, ARSA survey, 2011</figcaption></figure><figure><img src="img/gallery/g-cadiz-gannet.jpg" alt="Northern gannet with wings spread over the sea" loading="lazy"><figcaption>Gulf of Cádiz, 2011</figcaption></figure><figure><img src="img/gallery/g-cadiz-gulls-sun.jpg" alt="Gulls in silhouette against the sun" loading="lazy"><figcaption>Gulf of Cádiz, 2011</figcaption></figure><figure><img src="img/gallery/g-cadiz-gull-juvenile.jpg" alt="Young gull resting on the ship&#x27;s rail" loading="lazy"><figcaption>Gulf of Cádiz, 2011</figcaption></figure><figure><img src="img/gallery/g-cadiz-trawler.jpg" alt="Fishing trawler on a sea of sun glitter" loading="lazy"><figcaption>Gulf of Cádiz, 2011</figcaption></figure><figure><img src="img/gallery/g-cadiz-john-dory.jpg" alt="Juvenile John Dory held in a hand" loading="lazy"><figcaption>Gulf of Cádiz, 2011</figcaption></figure><figure><img src="img/gallery/g-cadiz-starfish.jpg" alt="Red sea star held up against the sea" loading="lazy"><figcaption>Gulf of Cádiz, 2011</figcaption></figure><figure><img src="img/gallery/g-cadiz-box-crab.jpg" alt="Spotted box crab on the sorting table" loading="lazy"><figcaption>Gulf of Cádiz, 2011</figcaption></figure><figure><img src="img/gallery/g-cadiz-shrimp.jpg" alt="Shrimp from the catch held over the sea" loading="lazy"><figcaption>Gulf of Cádiz, 2011</figcaption></figure><figure><img src="img/gallery/g-cadiz-shell.jpg" alt="Hermit crab in a sea snail shell, held against the sea" loading="lazy"><figcaption>Gulf of Cádiz, 2011</figcaption></figure><figure><img src="img/gallery/g-cadiz-anchovy.jpg" alt="Small silver fish from a trawl haul" loading="lazy"><figcaption>Gulf of Cádiz, 2011</figcaption></figure></div></div>
+<div class="gal-region"><h3>British Columbia</h3><span class="mono">49°N · PhD research stay at the UBC Fisheries Centre, Vancouver, Canada</span><div class="gal"><figure><img src="img/gallery/g-bc-lake.jpg" alt="Snowy peaks reflected in a still mountain lake" loading="lazy"><figcaption>Coast Mountains, British Columbia, 2010</figcaption></figure><figure><img src="img/gallery/g-bc-me-lake.jpg" alt="Marcela in a pink jacket by a mountain lake with snowy peaks" loading="lazy"><figcaption>Coast Mountains, British Columbia, 2010</figcaption></figure><figure><img src="img/gallery/g-bc-sockeye.jpg" alt="Red sockeye salmon gathered in a clear river" loading="lazy"><figcaption>Sockeye salmon run, British Columbia, 2010</figcaption></figure><figure><img src="img/gallery/g-bc-sockeye-run.jpg" alt="Spawning sockeye salmon in shallow rippling water" loading="lazy"><figcaption>Sockeye salmon run, British Columbia, 2010</figcaption></figure><figure><img src="img/gallery/g-bc-salmon-eggs.jpg" alt="Salmon eggs on the stony bed of a clear stream" loading="lazy"><figcaption>Salmon eggs in a spawning stream, 2010</figcaption></figure><figure><img src="img/gallery/g-bc-bear.jpg" alt="Black bear on a gravel bar reflected in a river" loading="lazy"><figcaption>Black bear on a salmon river, 2010</figcaption></figure><figure><img src="img/gallery/g-bc-ferry.jpg" alt="Ferry wake leading towards snow-dusted coastal mountains" loading="lazy"><figcaption>Ferry crossing, British Columbia coast, 2010</figcaption></figure><figure><img src="img/gallery/g-bc-gulf-islands.jpg" alt="Small vessel crossing a strait between forested islands" loading="lazy"><figcaption>Gulf Islands, British Columbia, 2010</figcaption></figure><figure><img src="img/gallery/g-bc-deer.jpg" alt="Three black-tailed deer grazing on a lawn" loading="lazy"><figcaption>Black-tailed deer, 2010</figcaption></figure><figure><img src="img/gallery/g-bc-waxwing.jpg" alt="Cedar waxwing perched on a bare branch" loading="lazy"><figcaption>Cedar waxwing, Vancouver, 2010</figcaption></figure><figure><img src="img/gallery/g-bc-squirrel.jpg" alt="Black squirrel eating a nut on the grass" loading="lazy"><figcaption>Black squirrel, Vancouver, 2010</figcaption></figure></div></div>
+<div class="gal-region"><h3>Brazil</h3><span class="mono">Equator to 27°S · coast, mangroves, Atlantic forest and the Pantanal</span><div class="gal"><figure><img src="img/me-amazon-boat.jpg" alt="Marcela with arms open in a boat on an Amazon river" loading="lazy"><figcaption>Amazon, Apr 2019</figcaption></figure><figure><img src="img/gallery/g-marajo-mangrove.jpg" alt="Mangrove trees on a tidal beach" loading="lazy"><figcaption>Marajó Island, Pará, Aug 2026</figcaption></figure><figure><img src="img/gallery/g-marajo-sunset.jpg" alt="Sunset over Marajó Bay" loading="lazy"><figcaption>Marajó Bay, Pará, Aug 2026</figcaption></figure><figure><img src="img/gallery/g-alcantara.jpg" alt="Beach at low tide" loading="lazy"><figcaption>Alcântara, Maranhão, Dec 2019</figcaption></figure><figure><img src="img/gallery/g-ubatuba.jpg" alt="Waves on a rocky shore with mountains" loading="lazy"><figcaption>Ubatuba, São Paulo, Jul 2026</figcaption></figure><figure><img src="img/gallery/g-intervales-river.jpg" alt="Forest reflected in a still river" loading="lazy"><figcaption>Vale do Ribeira, São Paulo, Apr 2024</figcaption></figure><figure><img src="img/gallery/g-intervales-forest.jpg" alt="Atlantic forest hills" loading="lazy"><figcaption>Vale do Ribeira, São Paulo, Apr 2024</figcaption></figure><figure><img src="img/gallery/g-floripa-dunes.jpg" alt="Coastal dunes" loading="lazy"><figcaption>Florianópolis, Apr 2024</figcaption></figure><figure><img src="img/gallery/g-cardoso-sunrise.jpg" alt="Sun breaking through storm clouds over the sea beside a forested island" loading="lazy"><figcaption>Ilha do Cardoso, São Paulo, 2017</figcaption></figure><figure><img src="img/gallery/g-cardoso-dolphins-sun.jpg" alt="Fins of Guiana dolphins in golden water under dark clouds" loading="lazy"><figcaption>Guiana dolphins (Sotalia guianensis), Ilha do Cardoso, 2017</figcaption></figure><figure><img src="img/gallery/g-cardoso-dolphin.jpg" alt="Guiana dolphin surfacing in a calm grey estuary" loading="lazy"><figcaption>Guiana dolphin (Sotalia guianensis), Ilha do Cardoso, 2017</figcaption></figure><figure><img src="img/gallery/g-pantanal-jabiru.jpg" alt="Jabiru stork walking through bright green aquatic plants, with a wattled jacana behind" loading="lazy"><figcaption>Jabiru and wattled jacana, Pantanal, 2018</figcaption></figure><figure><img src="img/gallery/g-pantanal-caiman.jpg" alt="Close-up of a yacare caiman among floating plants" loading="lazy"><figcaption>Yacare caiman, Pantanal, 2018</figcaption></figure><figure><img src="img/gallery/g-pantanal-hyacinth.jpg" alt="Four hyacinth macaws on the grass in evening light" loading="lazy"><figcaption>Hyacinth macaws, Pantanal, 2018</figcaption></figure><figure><img src="img/gallery/g-pantanal-hawk.jpg" alt="Savanna hawk perched on a treetop against a blue sky" loading="lazy"><figcaption>Savanna hawk, Pantanal, 2018</figcaption></figure><figure><img src="img/gallery/g-pantanal-deer.jpg" alt="Pampas deer standing in an open green field" loading="lazy"><figcaption>Pampas deer, Pantanal, 2018</figcaption></figure><figure><img src="img/gallery/g-pantanal-macaw.jpg" alt="Blue-and-yellow macaw feeding on a wooden perch" loading="lazy"><figcaption>Blue-and-yellow macaw, Pantanal, 2018</figcaption></figure><figure><img src="img/gallery/g-pantanal-armadillo.jpg" alt="Six-banded armadillo in the grass" loading="lazy"><figcaption>Six-banded armadillo, Pantanal, 2018</figcaption></figure><figure><img src="img/gallery/g-pantanal-jacamar.jpg" alt="Rufous-tailed jacamar perched on a branch" loading="lazy"><figcaption>Rufous-tailed jacamar, Pantanal, 2018</figcaption></figure><figure><img src="img/gallery/g-pantanal-sunset.jpg" alt="Orange sunset over trees and open pasture" loading="lazy"><figcaption>Sunset over the Pantanal, 2018</figcaption></figure></div></div>
+    <div class="next"><a href="#service" data-tab="service">Next: Service →</a></div>
+  </div>
+</section>
+
+<section id="service" data-pane="service">
+  <div class="wrap">
+    <div class="sec-head"><span class="eyebrow">Service</span><div><h2>Working groups and review</h2></div></div>
+    <ol class="list">
+<li><span class="yr">2024–</span><div>Member, ICES Working Group on Ecosystem-Based Fisheries Management of the Western Baltic Sea (WGECOBAL)</div></li>
+<li><span class="yr">2025–</span><div>Reviewer for Ecological Modelling; Oecologia (from 2026)</div></li>
+<li><span class="yr">2026</span><div>External reviewer of marine research cruise applications, Danish Centre for Marine Research</div></li>
+<li><span class="yr">2019–2026</span><div>Examiner on PhD and MSc committees at UFPE, UFSCar, UNICAMP and other universities, including EwE theses on the Gulf of Nicoya and the Ciénaga Grande de Santa Marta</div></li>
+<li><span class="yr">2015–2016</span><div>University representative on the Campinas Municipal Environment Council and its Environmental Education Plan working group</div></li>
+    </ol>
+    <div class="note-wrap"><img src="img/air-force-drawing.jpg" alt="Illustration of Marcela as an Air Force officer holding a clipboard" width="676" height="1000"><p class="note">Before moving fully into research, my work was hands-on environmental management. From 2017 to 2020 I worked for the Brazilian Air Force, where I was part of the team that wrote its environmental policy and environmental-management regulations. Between 2008 and 2020 I wrote 39 technical reports and environmental studies on flora, fauna and licensing in Brazil.</p></div>
+    <div class="next"><a href="#contact" data-tab="contact">Next: Contact →</a></div>
+  </div>
+</section>
+
+<section id="contact" data-pane="contact">
+  <div class="wrap">
+    <div class="sec-head"><span class="eyebrow">Contact</span><div><h2>Get in touch</h2><p>Write to me about ecosystem modelling, collaborations or student projects.</p></div></div>
+    <div class="contact">
+      <div>
+        <div class="copy"><code id="mail">mnascimento@geomar.de</code><button type="button" id="copybtn">Copy</button></div>
+        <p class="addr">GEOMAR Helmholtz Centre for Ocean Research Kiel<br>Research Division Marine Ecology · <a href="https://www.geomar.de/researchgroup-mscotti" target="_blank" rel="noopener">Ecosystem Modelling group</a><br>Wischhofstraße 1–3, 24148 Kiel, Germany</p>
+      </div>
+      <ul class="links">
+        <li><a href="https://orcid.org/0000-0002-6213-1271" target="_blank" rel="noopener">ORCID 0000-0002-6213-1271</a></li>
+        <li><a href="https://scholar.google.com/citations?user=rxmQMeQAAAAJ" target="_blank" rel="noopener">Google Scholar</a></li>
+        <li><a href="https://www.researchgate.net/profile/Marcela-Nascimento-2" target="_blank" rel="noopener">ResearchGate</a></li>
+        <li><a href="http://lattes.cnpq.br/2776741366969678" target="_blank" rel="noopener">Lattes CV (Brazil)</a></li>
+        <li><a href="https://www.geomar.de/en/mnascimento" target="_blank" rel="noopener">GEOMAR staff page</a></li>
+      </ul>
+    </div>
+    <h3 class="sub">Affiliations</h3>
+    <div class="logos">
+      <figure><img src="img/logos/geomar.png" alt="GEOMAR logo" width="422" height="184"><figcaption>GEOMAR Helmholtz Centre for Ocean Research Kiel<br>Ecosystem Modelling group, 2023–present</figcaption></figure>
+      <figure><img src="img/logos/uit.png" alt="UiT The Arctic University of Norway logo" width="504" height="72"><figcaption>UiT The Arctic University of Norway<br>Postdoctoral fellow, 2020–2023</figcaption></figure>
+      <figure><img src="img/logos/unicamp.png" alt="UNICAMP logo" width="167" height="184"><figcaption>State University of Campinas (UNICAMP)<br>PhD in Ecology, 2012</figcaption></figure>
+      <figure><img src="img/logos/ubc.png" alt="University of British Columbia logo" width="141" height="184"><figcaption>University of British Columbia<br>Visiting PhD student, 2010–2011</figcaption></figure>
+    </div>
+  </div>
+</section>
+</main>
+<div class="band" role="img" aria-label="Gulls following the research vessel during the ARSA cruise in the Gulf of Cádiz"><span>Gulls following the ship · ARSA cruise, Gulf of Cádiz, 2011</span></div>
+
+<footer><div class="wrap">© 2026 Marcela C. Nascimento · Maps and food-web figures by the author.</div></footer>
+
+<script>
+(function(){
+  var c=document.getElementById('sea'); if(!c||!c.getContext) return;
+  var ctx=c.getContext('2d'), t=0, still=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
+  function size(){var r=c.getBoundingClientRect();c.width=r.width*devicePixelRatio;c.height=r.height*devicePixelRatio;}
+  function draw(){
+    var w=c.width,h=c.height; ctx.clearRect(0,0,w,h);
+    for(var i=0;i<14;i++){
+      var y0=h*(0.06+i*0.065), amp=(8+i*1.5)*devicePixelRatio, k=0.0016+i*0.00012;
+      ctx.beginPath();
+      for(var x=0;x<=w;x+=8*devicePixelRatio){
+        var y=y0+Math.sin(x*k/devicePixelRatio+t*(0.6+i*0.05)+i)*amp+Math.sin(x*k*2.3/devicePixelRatio-t*0.4)*amp*0.35;
+        x?ctx.lineTo(x,y):ctx.moveTo(x,y);
+      }
+      ctx.strokeStyle='rgba(190,225,240,'+(0.22-i*0.012)+')'; ctx.lineWidth=devicePixelRatio; ctx.stroke();
+    }
+  }
+  function loop(){t+=0.008;draw();if(!document.getElementById('top').hidden)requestAnimationFrame(loop);else setTimeout(loop,500);}
+  size(); window.addEventListener('resize',function(){size();draw();});
+  if(still) draw(); else loop();
+})();
+(function(){
+  var panes=[].slice.call(document.querySelectorAll('[data-pane]'));
+  var names=['about','research','publications','talks','teaching','outreach','gallery','service','contact'];
+  document.body.classList.add('tabbed');
+  function show(name,scroll){
+    if(names.indexOf(name)<0) name='about';
+    panes.forEach(function(p){p.hidden=p.getAttribute('data-pane')!==name;});
+    document.querySelectorAll('.nav a.l').forEach(function(a){
+      if(a.getAttribute('data-tab')===name) a.setAttribute('aria-current','page'); else a.removeAttribute('aria-current');
+    });
+    if(scroll) window.scrollTo(0,0);
+  }
+  document.addEventListener('click',function(e){
+    var a=e.target.closest('a[data-tab]'); if(!a) return;
+    e.preventDefault(); var n=a.getAttribute('data-tab');
+    try{history.replaceState(null,'','#'+n);}catch(err){}
+    show(n,true);
+  });
+  window.addEventListener('hashchange',function(){show(location.hash.slice(1),true);});
+  show((location.hash||'#about').slice(1),false);
+})();
+document.getElementById('copybtn').addEventListener('click', function(){
+  var b=this, t=document.getElementById('mail').textContent;
+  function sel(){var r=document.createRange();r.selectNodeContents(document.getElementById('mail'));var s=getSelection();s.removeAllRanges();s.addRange(r);b.textContent='Selected';}
+  try{navigator.clipboard.writeText(t).then(function(){b.textContent='Copied';},sel);}catch(e){sel();}
+});
+</script>
+
+</body>
+</html>
